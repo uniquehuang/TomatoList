@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent">
+
+    <!-- 主布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 标题栏
+        <include
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>-->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/red">
+            <!--圆形图片-->
+            <hwl.bysj.tomatolist.util.CircleImage
+                android:id="@+id/image_mine"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_avatar"
+                app:borderColor="#A40090FF"
+                app:borderWidth="2dp"
+                app:hasBorder="true"
+                app:srcCompat="@mipmap/ic_avatar" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 />
+
+            <hwl.bysj.tomatolist.fish.FishRelativeLayout
+                android:id="@+id/fishRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </hwl.bysj.tomatolist.fish.FishRelativeLayout>
+
+
+            <LinearLayout
+                android:background="@color/red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom">
+
+
+                <TextView
+                    android:background="@drawable/bg_img"
+                    android:id="@+id/tomato_clock"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:drawableLeft="@mipmap/ic_tomato"
+                    android:textSize="20sp"
+                    android:text="@string/TomatoClock"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:drawableLeft="@mipmap/ic_book"
+                    android:background="@drawable/bg_img"
+                    android:id="@+id/study_room"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="@string/StudyRoom"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:background="@drawable/bg_img"
+                    android:drawableLeft="@mipmap/ic_tree"
+                    android:id="@+id/tree_hole"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="@string/TreeHole"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"/>
+
+                <TextView
+                    android:drawableLeft="@mipmap/ic_notebook"
+                    android:background="@drawable/bg_img"
+                    android:id="@+id/note_book"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="@string/note"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!-- 左侧导航栏 -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:itemIconSize="25dp"
+        app:menu="@menu/drawer_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

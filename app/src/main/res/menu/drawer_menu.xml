@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tomato_clock"
+        android:icon="@mipmap/ic_tomato"
+        android:title="@string/TomatoClock" />
+
+    <item
+        android:id="@+id/study_room"
+        android:icon="@mipmap/ic_study_room"
+        android:title="@string/StudyRoom" />
+
+    <item
+        android:id="@+id/tree_hole"
+        android:icon="@mipmap/ic_tree_hole"
+        android:title="@string/TreeHole" />
+
+    <item
+        android:id="@+id/note_book"
+        android:icon="@mipmap/ic_notebook"
+        android:title="@string/note" />
+
+    <item
+        android:id="@+id/about"
+        android:icon="@mipmap/ic_about"
+        android:title="@string/about" />
+
+    <item
+        android:id="@+id/login_out"
+        android:icon="@mipmap/ic_login_out"
+        android:title="@string/loginOut" />
+
+
+
+</menu>
